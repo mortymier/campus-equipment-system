@@ -20,9 +20,16 @@ public class EquipmentController
         return equipmentService.addEquipment(equipment);
     }
 
+    // GET - all equipments
+    @GetMapping
+    public List<EquipmentEntity> getAllEquipments()
+    {
+        return equipmentService.getAllEquipments();
+    }
+
     // GET - all available equipments
     @GetMapping("/available")
-    public List<EquipmentEntity> getAllEquipments()
+    public List<EquipmentEntity> getAllAvailableEquipments()
     {
         return equipmentService.getAllAvailableEquipments();
     }

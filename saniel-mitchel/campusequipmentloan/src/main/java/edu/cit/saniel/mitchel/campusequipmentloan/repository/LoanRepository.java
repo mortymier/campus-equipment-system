@@ -10,4 +10,5 @@ import java.util.List;
 public interface LoanRepository extends JpaRepository<LoanEntity, Integer>
 {
     public List<LoanEntity> findByStudent(StudentEntity student);
+    public List<LoanEntity> findByStudentAndStatus(StudentEntity student, LoanEntity.Status status);
 }

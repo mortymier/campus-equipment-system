@@ -18,6 +18,12 @@ public class EquipmentService
         return equipmentRepository.save(equipment);
     }
 
+    // GET - all equipments
+    public List<EquipmentEntity> getAllEquipments()
+    {
+        return equipmentRepository.findAll();
+    }
+
     // GET - all available equipments
     public List<EquipmentEntity> getAllAvailableEquipments()
     {

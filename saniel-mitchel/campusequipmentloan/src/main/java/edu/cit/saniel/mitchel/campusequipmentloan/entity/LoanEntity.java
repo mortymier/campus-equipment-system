@@ -21,7 +21,16 @@ public class LoanEntity
     private LocalDate startDate;
     private LocalDate dueDate;
     private LocalDate returnDate;
-    private String status;
+
+    public enum Status
+    {
+        ACTIVE, RETURNED, OVERDUE
+    }
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
+    private double penalty;
 
     public EquipmentEntity getEquipment()
     {
@@ -48,7 +57,7 @@ public class LoanEntity
         return this.returnDate;
     }
 
-    public String getStatus()
+    public Status getStatus()
     {
         return this.status;
     }
@@ -78,7 +87,7 @@ public class LoanEntity
         this.returnDate = returnDate;
     }
 
-    public void setStatus(String status)
+    public void setStatus(Status status)
     {
         this.status = status;
     }
