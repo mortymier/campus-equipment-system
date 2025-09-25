@@ -13,6 +13,8 @@ public class StudentEntity
     public String studentName;
     public String email;
 
+    public String password;
+
     public StudentEntity()
     {
         super();
@@ -25,10 +27,14 @@ public class StudentEntity
 
     public String getEmail() { return this.email; }
 
+    public String getPassword() { return this.password; }
+
     // Setters
     public void setStudentNo(int studentNo) { this.studentNo = studentNo; }
 
     public void setStudentName(String studentName) { this.studentName = studentName; }
 
     public void setEmail(String email) { this.email = email; }
+
+    public void setPassword(String password) { this.password = password; }
 }

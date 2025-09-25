@@ -4,8 +4,11 @@ import edu.cit.saniel.mitchel.campusequipmentloan.entity.StudentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface StudentRepository extends JpaRepository<StudentEntity, Integer>
 {
     public StudentEntity findByStudentId(int studentId);
+    public Optional<StudentEntity> findByEmailAndPassword(String email, String password);
 }
